@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Le Carnet Gourmand</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo" aria-hidden="true">🍝</div>
+      <div>
+        <p class="site-title">Le Carnet Gourmand</p>
+        <p class="site-subtitle">Avis des lecteurs</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="container layout">
+
+    <!-- Colonne recette -->
+    <section class="card recipe-card">
+      <h1>Pâtes crémeuses au citron</h1>
+      <p class="secondary">Laissez votre avis sur cette recette grâce au formulaire ci-contre.</p>
+
+      <div class="recipe-box">
+        <h2>Ingrédients</h2>
+        <ul>
+          <li>Pâtes</li>
+          <li>Crème</li>
+          <li>Citron</li>
+          <li>Parmesan</li>
+        </ul>
+
+        <h2>Préparation</h2>
+        <ol>
+          <li>Cuire les pâtes.</li>
+          <li>Mélanger la crème et le citron.</li>
+          <li>Ajouter le parmesan.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Colonne commentaires -->
+    <section class="card">
+      <h2 class="card-title">Laisser un commentaire</h2>
+
+      <form id="comment-form" novalidate>
+        <label for="nom">Votre nom</label>
+        <input type="text" id="nom" name="nom" placeholder="Ex : Roby">
+        <p class="hint">Minimum 2 caractères</p>
+
+        <label for="commentaire">Votre commentaire</label>
+        <textarea id="commentaire" name="commentaire" rows="4" placeholder="Votre avis sur la recette..."></textarea>
+        <p class="hint">Minimum 10 caractères</p>
+
+        <button type="submit" class="btn-publish">Publier</button>
+      </form>
+
+      <p id="error-message" class="error" role="alert" hidden></p>
+
+      <h2 class="card-title comments-title">Commentaires</h2>
+      <div id="comments-list"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Devoir JavaScript — Frontend</p>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>

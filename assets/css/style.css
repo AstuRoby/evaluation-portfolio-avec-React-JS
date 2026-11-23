@@ -1,0 +1,245 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f6f7fb;
+  color: #111827;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+h1, h2 {
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+p {
+  margin: 0;
+}
+
+.secondary,
+.site-subtitle,
+.hint {
+  color: #6b7280;
+}
+
+/* ---------- En-tête ---------- */
+.site-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.header-inner {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-sizing: content-box;
+}
+
+.logo {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  font-size: 18px;
+}
+
+.site-title {
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.site-subtitle {
+  font-size: 14px;
+  line-height: 1.3;
+  margin-top: 2px;
+}
+
+/* ---------- Mise en page : 2 colonnes ---------- */
+.container {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 22px 16px;
+  box-sizing: content-box;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 18px;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 16px;
+}
+
+/* ---------- Carte recette ---------- */
+.recipe-card h1 {
+  font-size: 32px;
+  margin: 24px 0 22px;
+}
+
+.recipe-card .secondary {
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.recipe-box {
+  background: #fafafa;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.recipe-box h2 {
+  font-size: 24px;
+  margin: 20px 0;
+}
+
+.recipe-box ul,
+.recipe-box ol {
+  margin: 16px 0;
+  padding-left: 40px;
+}
+
+/* ---------- Carte commentaires ---------- */
+.card-title {
+  font-size: 24px;
+  margin: 22px 0 20px;
+}
+
+label {
+  display: block;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  font: inherit;
+  font-size: 15px;
+  color: #111827;
+  background: #ffffff;
+}
+
+textarea {
+  height: 105px;
+  resize: vertical;
+}
+
+.hint {
+  font-size: 14px;
+  margin: 20px 0 24px;
+}
+
+.hint + label {
+  margin-top: 3px;
+}
+
+.btn-publish {
+  display: block;
+  width: 100%;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 12px;
+  background: #2563eb;
+  color: #ffffff;
+  font-weight: bold;
+  line-height: 15px;
+  cursor: pointer;
+}
+
+.error {
+  margin-top: 12px;
+  padding: 10px;
+  border-radius: 12px;
+  background: #fee2e2;
+  color: #dc2626;
+  font-size: 16px;
+}
+
+.error[hidden] {
+  display: none;
+}
+
+.card .comments-title {
+  margin: 22px 0 20px;
+}
+
+/* ---------- Commentaires ---------- */
+#comments-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.comment {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.comment-author {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.comment-text {
+  font-size: 15px;
+  margin-bottom: 28px;
+  overflow-wrap: anywhere;
+}
+
+.btn-delete {
+  padding: 6px 10px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  background: transparent;
+  color: #dc2626;
+  font-weight: bold;
+  line-height: 15px;
+  cursor: pointer;
+}
+
+.btn-delete-icon {
+  margin-right: 8px;
+}
+
+/* ---------- Pied de page ---------- */
+.site-footer {
+  border-top: 1px solid #e5e7eb;
+  padding: 32px 16px;
+  text-align: center;
+  color: #6b7280;
+  font-size: 15px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+}
